@@ -11,7 +11,8 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-114106230-1', 'auto');
+        var randomId = Math.floor(Math.random() * 200);
+        ga('create', 'UA-114106230-1', 'auto', { "userId": randomId });
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
         
@@ -19,6 +20,8 @@
           clientId = tracker.get('clientId');
           console.log(clientId);
         });
+        //var dimensionValue = 'SOME_DIMENSION_VALUE';
+        ga('set', 'dimension1', randomId);
         
         
         
